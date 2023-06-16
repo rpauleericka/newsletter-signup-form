@@ -3,50 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tomato: '#ff6257',
+            darkSlateGrey: '#242742',
+            charcoalGrey: '#36384e',
+            grey: '#9294a0',
+          }
+        },
+        fontFamily:{
+          'sans': 'Roboto, sans-serif',
+        }
+      }
+    }
+  </script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css" />
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: #3e52a3; }
   </style>
 </head>
-<body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
+<body class="bg-charcoalGrey">
+  <!-- creating the white card in the center-->
+  <div class="h-screen flex justify-center items-center">
+    <div class="min-w-4xl bg-white p-2 rounded-2xl drop-shadow-lg flex justify-center">
+      <div class="p-1 flex flex-col w-1/2 justify-center">
+        <h1 class="text-5xl font-bold">Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form>
+          <input type="email" value="email" name="email"/>
+          <label for="email">Email</label>
+        </form>
+      </div>
+      <div class="p-1">
+        <img src="assets/images/illustration-sign-up-desktop.svg" height="587" />
+      </div>
+    </div>
+  </div>  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Ericka</a>.
   </div>
 </body>
 </html>
