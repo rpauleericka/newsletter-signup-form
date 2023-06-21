@@ -25,29 +25,34 @@
   <link rel="stylesheet" href="styles.css" />
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    /*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
+    @import url('./assets/fonts/Roboto-Bold.ttf');
+    @import url('./assets/fonts/Roboto-Regular.ttf');
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: #3e52a3; }
   </style>
 </head>
-<body class="bg-charcoalGrey">
+<body class="bg-charcoalGrey text-charcoalGrey">
   <!-- creating the white card in the center-->
   <div class="h-screen flex justify-center items-center">
-    <div class="min-w-4xl bg-white p-2 rounded-2xl drop-shadow-lg flex justify-center">
-      <div class="p-1 flex flex-col w-1/2 justify-center">
-        <h1 class="text-5xl font-bold">Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <div class="min-w-fit bg-white py-6 px-2 rounded-2xl drop-shadow-lg flex justify-center">
+      <div class="flex flex-col justify-center w-1/2 space-y-3 p-5">
+        <h1 class="text-5xl font-bold text-darkSlateGrey">Stay updated!</h1>
+        <p class="text-base font-medium">Join 60,000+ product managers receiving monthly updates on:</p>
         <ul>
           <li>Product discovery and building what matters</li>
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ul>
-        <form>
-          <input type="email" value="email" name="email"/>
-          <label for="email">Email</label>
-        </form>
+          <form>
+            <div class="pr-5">
+              <label for="email" class="block py-2 font-bold text-sm">Email address</label>
+              <input type="email" placeholder="email@company.com" class="block border border-gray-300 w-full rounded text-gray-900 bg-gray p-3 rounded rounded-lg" value="" name="email"/>
+              <button class="bg-darkSlateGrey text-white text-sm tracking-wide font-semibold p-4 my-5 w-full text-center rounded-lg">Subscribe to monthly newsletter</button>
+            </div>
+          </form>
       </div>
-      <div class="p-1">
+      <div class="pl-2">
         <img src="assets/images/illustration-sign-up-desktop.svg" height="587" />
       </div>
     </div>
